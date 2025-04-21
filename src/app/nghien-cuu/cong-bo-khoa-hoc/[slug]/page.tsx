@@ -246,7 +246,7 @@ const publication = {
     },
     {
       id: 5,
-      text: \"Z. Cui, K. Henrickson, R. Ke, and Y. Wang, \&quot;Traffic graph convolutional recurrent neural network: A deep learning framework for network-scale traffic learning and forecasting,\&quot; IEEE Transactions on Intelligent Transportation Systems, vol. 21, no. 11, pp. 4883-4894, 2020.",
+      text: "Z. Cui, K. Henrickson, R. Ke, and Y. Wang, \&quot;Traffic graph convolutional recurrent neural network: A deep learning framework for network-scale traffic learning and forecasting,\&quot; IEEE Transactions on Intelligent Transportation Systems, vol. 21, no. 11, pp. 4883-4894, 2020.",
     },
     {
       id: 6,
