@@ -1,3 +1,5 @@
+"use client"
+
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { CONTACT_INFO } from "@/lib/constants"

@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import { Mail, Phone, MapPin, Award, BookOpen, Calendar, FileText, ExternalLink } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
