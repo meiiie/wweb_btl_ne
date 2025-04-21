@@ -33,7 +33,11 @@ export const metadata: Metadata = {
   },
 }
 
-export default function DocumentsPage() {
+export const viewport = { width: 1024, initialScale: 1 }
+
+export default function TaiLieuPage({ params, searchParams = {} }: { params: any; searchParams?: any }) {
+  const { auth } = searchParams || {}
+
   // Schema.org data
   const schemaData = {
     "@context": "https://schema.org",

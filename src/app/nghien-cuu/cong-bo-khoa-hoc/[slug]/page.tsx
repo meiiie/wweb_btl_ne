@@ -234,19 +234,19 @@ const publication = {
     },
     {
       id: 2,
-      text: "Y. Lv, Y. Duan, W. Kang, Z. Li, and F. Wang, \"Traffic flow prediction with big data: A deep learning approach,\" IEEE Transactions on Intelligent Transportation Systems, vol. 16, no. 2, pp. 865-873, 2015.",
+      text: "Y. Lv, Y. Duan, W. Kang, Z. Li, and F. Wang, &quot;Traffic flow prediction with big data: A deep learning approach,&quot; IEEE Transactions on Intelligent Transportation Systems, vol. 16, no. 2, pp. 865-873, 2015.",
     },
     {
       id: 3,
-      text: "H. Nguyen, L. M. Kieu, T. Wen, and C. Cai, \"Deep learning methods in transportation domain: A review,\" IET Intelligent Transport Systems, vol. 12, no. 9, pp. 998-1004, 2018.",
+      text: "H. Nguyen, L. M. Kieu, T. Wen, and C. Cai, &quot;Deep learning methods in transportation domain: A review,&quot; IET Intelligent Transport Systems, vol. 12, no. 9, pp. 998-1004, 2018.",
     },
     {
       id: 4,
-      text: "X. Ma, Z. Dai, Z. He, J. Ma, Y. Wang, and Y. Wang, \"Learning traffic as images: A deep convolutional neural network for large-scale transportation network speed prediction, Sensors, vol. 17, no. 4, p. 818, 2017.\"",
+      text: "X. Ma, Z. Dai, Z. He, J. Ma, Y. Wang, and Y. Wang, \"Learning traffic as images: A deep convolutional neural network for large-scale transportation network speed prediction," Sensors, vol. 17, no. 4, p. 818, 2017.",
     },
     {
       id: 5,
-      text: "Z. Cui, K. Henrickson, R. Ke, and Y. Wang, \"Traffic graph convolutional recurrent neural network: A deep learning framework for network-scale traffic learning and forecasting,\" IEEE Transactions on Intelligent Transportation Systems, vol. 21, no. 11, pp. 4883-4894, 2020.",
+      text: "Z. Cui, K. Henrickson, R. Ke, and Y. Wang, \&quot;Traffic graph convolutional recurrent neural network: A deep learning framework for network-scale traffic learning and forecasting,\&quot; IEEE Transactions on Intelligent Transportation Systems, vol. 21, no. 11, pp. 4883-4894, 2020.",
     },
     {
       id: 6,
