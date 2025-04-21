@@ -1,0 +1,325 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #003366; /* Xanh hải quân - màu chính của VMU */
+  --primary-dark: #002347;
+  --secondary: #005bbb; /* Xanh dương sáng cho các điểm nhấn */
+  --accent: #ffd100; /* Vàng cho các điểm nhấn phụ */
+  --background: #ffffff;
+  --foreground: #333333;
+  --muted: #f5f5f5;
+  --muted-foreground: #6c757d;
+  --border: #e2e8f0;
+  --header-height: 120px;
+  --header-height-scrolled: 64px;
+  --header-spacing: 12px; /* Khoảng cách giữa hai tầng header */
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-800;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold text-primary;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl lg:text-3xl;
+  }
+
+  a {
+    @apply text-primary hover:text-primary-500 transition-colors;
+  }
+
+  /* Cải thiện focus styles cho accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-white;
+  }
+
+  /* Cải thiện keyboard navigation */
+  [tabindex]:not([tabindex="-1"]):focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-600 text-white font-bold py-2 px-4 rounded transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded transition-colors;
+  }
+
+  .btn-outline {
+    @apply border border-primary text-primary hover:bg-primary hover:text-white font-bold py-2 px-4 rounded transition-colors;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden;
+  }
+
+  .section {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .container-custom {
+    @apply container mx-auto px-4 md:px-6;
+  }
+
+  /* Accessibility helper classes */
+  .sr-only {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+  }
+
+  .focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2;
+  }
+
+  /* Animation classes */
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Mega menu styles */
+  .mega-menu-item {
+    @apply relative group;
+  }
+
+  .mega-menu-button {
+    @apply px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100 hover:text-primary flex items-center transition-colors duration-200;
+  }
+
+  .mega-menu-button.active {
+    @apply text-primary font-medium;
+  }
+
+  /* Off-canvas menu animation */
+  .slide-in-left {
+    animation: slideInLeft 0.3s forwards;
+  }
+
+  .slide-out-left {
+    animation: slideOutLeft 0.3s forwards;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideOutLeft {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Hover effects for navigation items */
+  .nav-item-hover {
+    @apply relative overflow-hidden;
+  }
+
+  .nav-item-hover::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+  }
+
+  .nav-item-hover:hover::after {
+    @apply w-full;
+  }
+
+  /* Header styles */
+  .header-top {
+    @apply bg-white py-4;
+  }
+
+  .header-border {
+    @apply h-1 bg-primary w-full;
+  }
+
+  .main-nav {
+    @apply bg-primary text-white py-0;
+  }
+
+  .nav-item > a {
+    @apply flex items-center px-3 py-4 text-white hover:bg-secondary transition-colors;
+  }
+
+  .nav-item.active > a {
+    @apply border-b-2 border-accent;
+  }
+
+  .lang-switch button {
+    @apply w-8 h-8 rounded text-sm font-medium;
+  }
+
+  .lang-switch button.active {
+    @apply bg-secondary text-white;
+  }
+
+  .lang-switch button:not(.active) {
+    @apply bg-white text-secondary border border-secondary;
+  }
+
+  /* Improved header transition */
+  .header-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  /* Improved navigation item hover effect */
+  .nav-item > a {
+    @apply relative;
+  }
+
+  .nav-item > a::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 ease-out;
+  }
+
+  .nav-item > a:hover::after,
+  .nav-item.active > a::after {
+    @apply w-full;
+  }
+
+  /* Improved mega menu animation */
+  .mega-menu-enter {
+    @apply opacity-0 -translate-y-4;
+  }
+
+  .mega-menu-enter-active {
+    @apply opacity-100 translate-y-0 transition-all duration-300 ease-out;
+  }
+
+  .mega-menu-exit {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .mega-menu-exit-active {
+    @apply opacity-0 -translate-y-4 transition-all duration-300 ease-in;
+  }
+
+  /* Cập nhật styles cho header trên thiết bị di động */
+  @media (max-width: 768px) {
+    .header-transition {
+      @apply transition-all duration-200 ease-in-out;
+    }
+
+    .main-nav {
+      @apply py-2;
+    }
+
+    /* Đảm bảo header luôn dính vào top khi cuộn trên mobile */
+    .sticky-header-mobile {
+      @apply sticky top-0 z-50;
+    }
+  }
+
+  /* Mega menu improvements */
+  .mega-menu-container {
+    @apply shadow-lg border-t border-gray-200;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .mega-menu-container h3 {
+    @apply text-xl font-bold text-primary mb-3;
+    position: relative;
+  }
+
+  .mega-menu-container h3::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-12 h-0.5 bg-accent;
+    margin-bottom: -8px;
+  }
+
+  .mega-menu-container h4 {
+    @apply font-medium text-primary mb-2;
+    position: relative;
+  }
+
+  .mega-menu-container a {
+    @apply transition-all duration-200;
+  }
+
+  .mega-menu-container a:hover {
+    @apply text-secondary transform translate-x-1;
+  }
+
+  /* Improved navigation hover effects */
+  .nav-item > a,
+  .nav-item > button {
+    @apply relative overflow-hidden;
+  }
+
+  .nav-item > a::after,
+  .nav-item > button::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 ease-out;
+  }
+
+  .nav-item > a:hover::after,
+  .nav-item > button:hover::after,
+  .nav-item.active > a::after,
+  .nav-item.active > button::after {
+    @apply w-full;
+  }
+
+  /* Improved header transition */
+  .header-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  /* Smooth dropdown animation */
+  .dropdown-animation {
+    @apply transition-all duration-200 ease-in-out transform;
+  }
+
+  .dropdown-enter {
+    @apply opacity-0 -translate-y-2;
+  }
+
+  .dropdown-enter-active {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .dropdown-exit {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .dropdown-exit-active {
+    @apply opacity-0 -translate-y-2;
+  }
+}
