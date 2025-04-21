@@ -242,7 +242,7 @@ const publication = {
     },
     {
       id: 4,
-      text: "X. Ma, Z. Dai, Z. He, J. Ma, Y. Wang, and Y. Wang, \"Learning traffic as images: A deep convolutional neural network for large-scale transportation network speed prediction," Sensors, vol. 17, no. 4, p. 818, 2017.",
+      text: "X. Ma, Z. Dai, Z. He, J. Ma, Y. Wang, and Y. Wang, \"Learning traffic as images: A deep convolutional neural network for large-scale transportation network speed prediction, Sensors, vol. 17, no. 4, p. 818, 2017.",
     },
     {
       id: 5,
